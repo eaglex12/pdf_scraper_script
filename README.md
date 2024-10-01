@@ -49,4 +49,21 @@ This script automates mouse clicks at the current mouse position every second.
 python mouse.py
 ```
 
+### Using JavaScript in Browser Console
+
+If you don't want to use the Python script, you can run a JavaScript snippet directly in your browser's console to download PDF files from a webpage.
+
+#### Instructions:
+
+1. **Open the Webpage**: Go to the webpage that contains the PDF links you want to download.
+2. **Open the Console**:
+   - **Google Chrome**: Right-click on the page, select "Inspect," and then click on the "Console" tab.
+   - **Mozilla Firefox**: Right-click on the page, select "Inspect Element," and then click on the "Console" tab.
+   - **Microsoft Edge**: Right-click on the page, select "Inspect," and then click on the "Console" tab.
+3. **Copy and Paste the Script**: Use the following JavaScript code snippet given in console.txt, which selects all `<a>` tags with hrefs ending in `.pdf` and automatically downloads them.
+4. **Run the Script**: Press `Enter` after pasting the script into the console. The script will start downloading all the PDFs it finds on the page.
+
+#### Notes:
+- Ensure that pop-up blockers are disabled for the page, as some browsers may block automatic downloads.
+
 
