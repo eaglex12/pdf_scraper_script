@@ -24,7 +24,7 @@ pip install requests beautifulsoup4 pyautogui
 
 This script downloads all PDF files from a specified webpage.
 
-- **File:** `pdf_downloader.py`
+- **File:** `script.py`
 - **Requirements:** `requests`, `beautifulsoup4`
 - **How to Use:**
   1. Open the script and modify the `url` variable to point to the desired webpage containing the PDFs.
@@ -32,7 +32,7 @@ This script downloads all PDF files from a specified webpage.
   3. Run the script:
 
 ```bash
-python pdf_downloader.py
+python script.py
 ```
 
 ### Auto Clicker Script
