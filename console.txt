@@ -1,0 +1,26 @@
+// Select all <a> tags with hrefs ending in .pdf
+const pdfLinks = [...document.querySelectorAll('a[href$=".pdf"]')];
+
+// Function to download PDFs
+function downloadPdf(url, fileName) {
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.style.display = 'none'; // Hide the download link
+            a.click();
+            document.body.removeChild(a); // Clean up
+            URL.revokeObjectURL(a.href); // Free up memory
+        })
+        .catch(console.error);
+}
+
+// Loop through each link and automatically download the PDFs
+pdfLinks.forEach((link) => {
+    const url = link.href;
+    const fileName = url.split('/').pop().split('#')[0].split('?')[0]; // Extract filename from URL
+    downloadPdf(url, fileName); // Call download function
+});
